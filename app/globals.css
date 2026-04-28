@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ── Eco-Tech Design Tokens ─────────────────────────────────────── */
+@theme {
+  /* Backgrounds */
+  --color-bg-base:     #0D1117;
+  --color-bg-surface:  #161B22;
+  --color-bg-elevated: #1C2128;
+
+  /* Borders */
+  --color-border-subtle: #21262D;
+
+  /* Accents */
+  --color-accent-green:   #39D353;
+  --color-accent-emerald: #00D9A3;
+  --color-accent-neon:    #ADFF2F;
+
+  /* Text */
+  --color-text-primary:   #E6EDF3;
+  --color-text-secondary: #8B949E;
+  --color-text-muted:     #484F58;
+
+  /* Fonts */
+  --font-sans:    var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    var(--font-jetbrains), ui-monospace, "Cascadia Code", monospace;
+}
+
+/* ── CSS Custom Properties (for use in arbitrary values) ────────── */
+:root {
+  --glow-green:    rgba(57, 211, 83, 0.15);
+  --glow-emerald:  rgba(0, 217, 163, 0.12);
+  --glow-green-md: rgba(57, 211, 83, 0.25);
+  --grid-color:    rgba(72, 79, 88, 0.18);
+}
+
+/* ── Base Reset ─────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0D1117;
+  color: #E6EDF3;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Tech Grid Overlay ──────────────────────────────────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── Custom Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: #0D1117; }
+::-webkit-scrollbar-thumb  { background: #39D353; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00D9A3; }
+
+/* ── Selection ──────────────────────────────────────────────────── */
+::selection {
+  background: rgba(57, 211, 83, 0.25);
+  color: #E6EDF3;
+}
+
+/* ── Glow Utilities ─────────────────────────────────────────────── */
+.glow-green   { box-shadow: 0 0 24px var(--glow-green),   0 0 48px rgba(57,211,83,0.05); }
+.glow-emerald { box-shadow: 0 0 24px var(--glow-emerald); }
+
+/* ── Text Glow ──────────────────────────────────────────────────── */
+.text-glow-green { text-shadow: 0 0 20px rgba(57, 211, 83, 0.6); }
+.text-glow-neon  { text-shadow: 0 0 20px rgba(173, 255, 47, 0.7); }
+
+/* ── Animated gradient text for metric counters ─────────────────── */
+.gradient-counter {
+  background: linear-gradient(135deg, #39D353, #ADFF2F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Timeline gradient line ─────────────────────────────────────── */
+.timeline-line {
+  background: linear-gradient(to bottom, #39D353, #00D9A3, transparent);
+}
