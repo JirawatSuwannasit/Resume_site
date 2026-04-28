@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { Mail, Phone, ChevronDown } from "lucide-react";
-import Image from "next/image";
 import { resumeData } from "@/lib/resume";
 
 export default function HeroSection() {
@@ -60,13 +59,12 @@ export default function HeroSection() {
             >
               {/* Inner dark ring */}
               <div className="rounded-full p-[3px] bg-bg-base">
-                <div className="relative w-52 h-52 lg:w-64 lg:h-64 rounded-full overflow-hidden">
-                  <Image
-                    src="/profile.jpg"
+                <div className="w-52 h-52 lg:w-64 lg:h-64 rounded-full overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/profile.JPG"
                     alt="Jirawat Suwannasit"
-                    fill
-                    className="object-cover object-top"
-                    priority
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>
