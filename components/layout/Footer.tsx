@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Linkedin } from "lucide-react";
 import { resumeData } from "@/lib/resume";
 
 export default function Footer() {
@@ -30,6 +30,15 @@ export default function Footer() {
           >
             <Phone size={14} />
             {phone}
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jirawat-suwannasit-4b606810a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-text-secondary hover:text-accent-green transition-colors text-sm"
+          >
+            <Linkedin size={14} />
+            LinkedIn
           </a>
         </div>
 
