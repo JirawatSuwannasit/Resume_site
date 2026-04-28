@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { Mail, Phone, ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { resumeData } from "@/lib/resume";
 
 export default function HeroSection() {
@@ -40,81 +41,123 @@ export default function HeroSection() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-3xl"
-        >
-          {/* Status chip */}
-          <motion.div variants={itemVariants} className="mb-6">
-            <span className="inline-flex items-center gap-2 font-mono text-xs text-accent-green border border-accent-green/30 rounded-full px-4 py-1.5 bg-accent-green/5">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse" />
-              Hardware Test Supervisor · Panasonic Automotive
-            </span>
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+
+          {/* ── Profile Photo ────────────────────────────────────── */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="shrink-0 order-first lg:order-last lg:ml-auto"
+          >
+            {/* Outer glow ring */}
+            <div
+              className="rounded-full p-[3px]"
+              style={{
+                background: "linear-gradient(135deg, #39D353, #00D9A3, #ADFF2F)",
+                boxShadow: "0 0 32px rgba(57,211,83,0.35), 0 0 64px rgba(57,211,83,0.15)",
+              }}
+            >
+              {/* Inner dark ring */}
+              <div className="rounded-full p-[3px] bg-bg-base">
+                <div className="relative w-52 h-52 lg:w-64 lg:h-64 rounded-full overflow-hidden">
+                  <Image
+                    src="/profile.jpg"
+                    alt="Jirawat Suwannasit"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Status dot badge */}
+            <div className="flex justify-center mt-4">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-accent-green/10 text-accent-green border border-accent-green/30">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse" />
+                Available
+              </span>
+            </div>
           </motion.div>
 
-          {/* Name */}
-          <motion.h1
-            variants={itemVariants}
-            className="font-bold text-text-primary mb-4 leading-tight"
-            style={{
-              fontFamily: "var(--font-space-grotesk, sans-serif)",
-              fontSize: "clamp(2.5rem, 7vw, 5rem)",
-            }}
+          {/* ── Text content ─────────────────────────────────────── */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="max-w-2xl"
           >
-            {name.split(" ")[0]}{" "}
-            <span className="text-glow-green" style={{ color: "#39D353" }}>
-              {name.split(" ").slice(1).join(" ")}
-            </span>
-          </motion.h1>
+            {/* Status chip */}
+            <motion.div variants={itemVariants} className="mb-6">
+              <span className="inline-flex items-center gap-2 font-mono text-xs text-accent-green border border-accent-green/30 rounded-full px-4 py-1.5 bg-accent-green/5">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse" />
+                Hardware Test Supervisor · Panasonic Automotive
+              </span>
+            </motion.div>
 
-          {/* Animated tagline */}
-          <motion.div variants={itemVariants} className="h-8 mb-6 overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={taglineIdx}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.35, ease: "easeInOut" }}
-                className="font-mono text-accent-emerald text-lg"
+            {/* Name */}
+            <motion.h1
+              variants={itemVariants}
+              className="font-bold text-text-primary mb-4 leading-tight"
+              style={{
+                fontFamily: "var(--font-space-grotesk, sans-serif)",
+                fontSize: "clamp(2.5rem, 7vw, 5rem)",
+              }}
+            >
+              {name.split(" ")[0]}{" "}
+              <span className="text-glow-green" style={{ color: "#39D353" }}>
+                {name.split(" ").slice(1).join(" ")}
+              </span>
+            </motion.h1>
+
+            {/* Animated tagline */}
+            <motion.div variants={itemVariants} className="h-8 mb-6 overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={taglineIdx}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -16 }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  className="font-mono text-accent-emerald text-lg"
+                >
+                  &gt; {taglines[taglineIdx]}
+                </motion.p>
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Description */}
+            <motion.p
+              variants={itemVariants}
+              className="text-text-secondary text-lg leading-relaxed max-w-xl mb-8"
+            >
+              Combining <span className="text-accent-green font-medium">hardware automation</span> and{" "}
+              <span className="text-accent-emerald font-medium">IoT systems</span> with a deep
+              commitment to{" "}
+              <span className="text-accent-neon font-medium">environmental sustainability</span>.
+              Driving 135.9 MWh of annual energy savings and counting.
+            </motion.p>
+
+            {/* Contact row */}
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+              <a
+                href={`mailto:${email}`}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent-green text-bg-base font-medium text-sm hover:bg-accent-emerald transition-colors duration-200"
               >
-                &gt; {taglines[taglineIdx]}
-              </motion.p>
-            </AnimatePresence>
+                <Mail size={15} />
+                {email}
+              </a>
+              <a
+                href={`tel:${phone}`}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-surface border border-border-subtle text-text-secondary hover:text-accent-green hover:border-accent-green/40 text-sm transition-colors duration-200"
+              >
+                <Phone size={15} />
+                {phone}
+              </a>
+            </motion.div>
           </motion.div>
-
-          {/* Tagline description */}
-          <motion.p
-            variants={itemVariants}
-            className="text-text-secondary text-lg leading-relaxed max-w-xl mb-8"
-          >
-            Combining <span className="text-accent-green font-medium">hardware automation</span> and{" "}
-            <span className="text-accent-emerald font-medium">IoT systems</span> with a deep
-            commitment to{" "}
-            <span className="text-accent-neon font-medium">environmental sustainability</span>.
-            Driving 135.9 MWh of annual energy savings and counting.
-          </motion.p>
-
-          {/* Contact row */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-            <a
-              href={`mailto:${email}`}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent-green text-bg-base font-medium text-sm hover:bg-accent-emerald transition-colors duration-200"
-            >
-              <Mail size={15} />
-              {email}
-            </a>
-            <a
-              href={`tel:${phone}`}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-surface border border-border-subtle text-text-secondary hover:text-accent-green hover:border-accent-green/40 text-sm transition-colors duration-200"
-            >
-              <Phone size={15} />
-              {phone}
-            </a>
-          </motion.div>
-        </motion.div>
+        </div>
 
         {/* Metrics strip */}
         <motion.div
@@ -124,10 +167,10 @@ export default function HeroSection() {
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl"
         >
           {[
-            { value: "135.9", unit: "MWh", label: "Energy Saved" },
-            { value: "62.65", unit: "tCO₂", label: "CO₂ Reduced" },
-            { value: "74%",   unit: "",    label: "Lead Time Cut" },
-            { value: "10+",   unit: "yrs", label: "Experience"   },
+            { value: "135.9", unit: "MWh",  label: "Energy Saved"  },
+            { value: "62.65", unit: "tCO₂", label: "CO₂ Reduced"   },
+            { value: "74%",   unit: "",     label: "Lead Time Cut"  },
+            { value: "10+",   unit: "yrs",  label: "Experience"     },
           ].map((s) => (
             <div
               key={s.label}
