@@ -43,7 +43,7 @@ export default function MetricCounter({
   return (
     <div ref={ref} className="text-center min-w-0">
       <div
-        className="font-mono font-bold leading-tight gradient-counter break-words"
+        className="font-mono font-bold leading-tight gradient-counter whitespace-nowrap"
         style={{ fontSize }}
       >
         {formatted}

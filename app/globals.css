@@ -17,8 +17,8 @@
 
   /* Text */
   --color-text-primary:   #E6EDF3;
-  --color-text-secondary: #B0BAC4;
-  --color-text-muted:     #484F58;
+  --color-text-secondary: #D1FAE5;
+  --color-text-muted:     #6EE7B7;
 
   /* Fonts */
   --font-sans:    var(--font-inter), ui-sans-serif, system-ui, sans-serif;

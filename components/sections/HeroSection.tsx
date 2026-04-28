@@ -174,9 +174,9 @@ export default function HeroSection() {
               key={s.label}
               className="bg-bg-surface border border-border-subtle rounded-xl p-4 text-center"
             >
-              <div className="font-mono font-bold gradient-counter text-xl">
+              <div className="font-mono font-bold gradient-counter text-xl whitespace-nowrap">
                 {s.value}
-                {s.unit && <span className="text-sm text-accent-green ml-1">{s.unit}</span>}
+                {s.unit && <span className="text-sm text-accent-green ml-1 whitespace-nowrap">{s.unit}</span>}
               </div>
               <div className="text-text-muted text-xs mt-1">{s.label}</div>
             </div>
