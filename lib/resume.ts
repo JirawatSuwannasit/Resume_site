@@ -16,7 +16,7 @@ export const resumeData: ResumeData = {
 
   strategicFocus: {
     objective:
-      "I aim to leverage my 10+ years in Hardware Reliability and my M.Eng in Energy Management Technology to drive organizational efficiency through IoT, Power Automate (RPA), and Carbon Accounting (ISO 14064-1). I am passionate about helping companies reach Net Zero through Digital Transformation — turning operational data into measurable sustainability outcomes.",
+      "I aim to leverage my 10+ years in Hardware Reliability and my M.Eng in Energy Management Technology to drive organizational efficiency through IoT, AI Solutions, and Energy & Carbon Management (ISO 14064-1). I am passionate about helping companies reach Net Zero through Digital Transformation — turning operational data into measurable sustainability outcomes.",
     areas: [
       {
         title: "Digital Transformation",

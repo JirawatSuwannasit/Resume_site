@@ -91,7 +91,7 @@ export default function StrategicFocusSection() {
             </div>
             {/* Highlight tags */}
             <div className="flex flex-wrap gap-2 mt-5 pl-10">
-              {["IoT Systems", "Power Automate (RPA)", "ISO 14064-1", "Net Zero", "Digital Transformation"].map((tag) => (
+              {["IoT Systems", "AI Solutions", "Energy & Carbon Management", "Net Zero", "Digital Transformation"].map((tag) => (
                 <span
                   key={tag}
                   className="font-mono text-xs text-accent-emerald border border-accent-emerald/30 rounded-full px-3 py-0.5 bg-accent-emerald/5"
