@@ -28,7 +28,7 @@ export const resumeData: ResumeData = {
       {
         title: "Energy Management",
         description:
-          "Identifying and executing energy conservation initiatives — from chiller optimization to right-sizing equipment — with a track record of 135.9 MWh annual savings.",
+          "Identifying and executing energy conservation initiatives — from chiller optimization to right-sizing equipment — with a track record of 238 MWh annual savings.",
         icon: "🌿",
         color: "emerald",
       },
