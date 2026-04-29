@@ -56,6 +56,7 @@ export const resumeData: ResumeData = {
       "IoT / ESP32",
       "Microcontroller Circuit",
       "AI Prompting",
+      "AI Vibe Coding",
     ],
   },
 
