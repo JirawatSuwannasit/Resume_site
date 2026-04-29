@@ -169,20 +169,24 @@ export default function HeroSection() {
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl"
         >
           {[
-            { value: "238",         unit: "MWh",  label: "Energy Saved"       },
-            { value: "62.65",       unit: "tCO₂", label: "CO₂ Reduced"        },
-            { value: "1,101,492",   unit: "THB",  label: "Annual Cost Savings" },
-            { value: "10+",         unit: "yrs",  label: "Experience"          },
+            { value: "238",       unit: "MWh",  label: "Energy Saved"        },
+            { value: "62.65",     unit: "tCO₂", label: "CO₂ Reduced"         },
+            { value: "1,101,492", unit: "THB",  label: "Annual Cost Savings"  },
+            { value: "10+",       unit: "yrs",  label: "Experience"           },
           ].map((s) => (
             <div
               key={s.label}
-              className="bg-bg-surface border border-border-subtle rounded-xl p-4 text-center"
+              className="bg-bg-surface border border-border-subtle rounded-xl p-4 text-center flex flex-col items-center justify-center gap-0.5"
             >
-              <div className="font-mono font-bold gradient-counter text-xl whitespace-nowrap">
+              <div className="font-mono font-bold gradient-counter text-base leading-tight">
                 {s.value}
-                {s.unit && <span className="text-sm text-accent-green ml-1 whitespace-nowrap">{s.unit}</span>}
               </div>
-              <div className="text-text-muted text-xs mt-1">{s.label}</div>
+              {s.unit && (
+                <div className="font-mono text-xs text-accent-green font-medium">
+                  {s.unit}
+                </div>
+              )}
+              <div className="text-text-muted text-xs mt-0.5">{s.label}</div>
             </div>
           ))}
         </motion.div>
