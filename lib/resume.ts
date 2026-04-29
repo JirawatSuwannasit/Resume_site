@@ -145,8 +145,8 @@ export const resumeData: ResumeData = {
       description:
         "Installed exhaust systems for heat removal in the vibration machine room, drastically reducing air conditioner dependency.",
       metrics: [
-        { value: 93, unit: "%", label: "AC Usage Reduction", decimals: 0 },
-        { value: 18458, unit: "kWh", label: "Annual Energy Saved", decimals: 0 },
+        { value: 18458, unit: "kWh", label: "Annual Energy Saved",  decimals: 0 },
+        { value: 76600, unit: "THB", label: "Annual Cost Savings",  decimals: 0 },
       ],
       tags: ["HVAC", "Energy", "Hardware"],
       featured: false,
