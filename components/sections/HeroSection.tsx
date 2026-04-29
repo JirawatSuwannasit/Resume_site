@@ -87,9 +87,12 @@ export default function HeroSection() {
             className="max-w-2xl"
           >
             {/* Status chip */}
-            <motion.div variants={itemVariants} className="mb-6">
+            <motion.div variants={itemVariants} className="mb-6 flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-2 font-mono text-xs text-accent-green border border-accent-green/30 rounded-full px-4 py-1.5 bg-accent-green/5">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse" />
+                Open to New Opportunities
+              </span>
+              <span className="inline-flex items-center gap-2 font-mono text-xs text-accent-emerald border border-accent-emerald/30 rounded-full px-4 py-1.5 bg-accent-emerald/5">
                 Hardware Test Supervisor · Panasonic Automotive
               </span>
             </motion.div>
@@ -128,13 +131,20 @@ export default function HeroSection() {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="text-text-secondary text-lg leading-relaxed max-w-xl mb-8"
+              className="text-text-secondary text-lg leading-relaxed max-w-xl mb-3"
             >
-              Combining <span className="text-accent-green font-medium">hardware automation</span> and{" "}
-              <span className="text-accent-emerald font-medium">IoT systems</span> with a deep
-              commitment to{" "}
-              <span className="text-accent-neon font-medium">environmental sustainability</span>.
-              Driving 135.9 MWh of annual energy savings and counting.
+              Engineer with <span className="text-accent-green font-medium">10+ years in Hardware Reliability</span> and
+              an <span className="text-accent-emerald font-medium">M.Eng in Energy Management</span> —
+              now actively seeking roles in{" "}
+              <span className="text-accent-neon font-medium">Digital Transformation</span>,{" "}
+              <span className="text-accent-green font-medium">Energy Management</span>, and{" "}
+              <span className="text-accent-emerald font-medium">Carbon Footprint Assessment</span>.
+            </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-text-muted text-sm leading-relaxed max-w-xl mb-8 font-mono"
+            >
+              Proven track record: 135.9 MWh saved · 62.65 tCO₂ reduced · 74% lead time cut
             </motion.p>
 
             {/* Contact row */}

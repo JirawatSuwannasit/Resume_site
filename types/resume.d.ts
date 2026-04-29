@@ -6,6 +6,18 @@ export interface HeroData {
   phone: string;
 }
 
+export interface FocusArea {
+  title: string;
+  description: string;
+  icon: string;
+  color: "green" | "emerald" | "neon";
+}
+
+export interface StrategicFocus {
+  objective: string;
+  areas: FocusArea[];
+}
+
 export interface SkillGroup {
   label: string;
   icon: string;
@@ -60,6 +72,7 @@ export interface CertEntry {
 
 export interface ResumeData {
   hero: HeroData;
+  strategicFocus: StrategicFocus;
   techSkills: SkillGroup;
   greenSkills: SkillGroup;
   experience: ExperienceEntry[];

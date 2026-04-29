@@ -5,13 +5,41 @@ export const resumeData: ResumeData = {
     name: "Jirawat Suwannasit",
     role: "Hardware Test Supervisor",
     taglines: [
-      "Hardware Test Supervisor",
-      "IoT & Automation Engineer",
-      "Sustainability Advocate",
-      "Energy Conservation Specialist",
+      "Seeking: Digital Transformation Roles",
+      "Seeking: Energy Management Roles",
+      "Seeking: Carbon Footprint Assessment Roles",
+      "10+ Years · Hardware & IoT · M.Eng Energy",
     ],
     email: "jirawatpromma@gmail.com",
     phone: "085-108-7887",
+  },
+
+  strategicFocus: {
+    objective:
+      "I aim to leverage my 10+ years in Hardware Reliability and my M.Eng in Energy Management Technology to drive organizational efficiency through IoT, Power Automate (RPA), and Carbon Accounting (ISO 14064-1). I am passionate about helping companies reach Net Zero through Digital Transformation — turning operational data into measurable sustainability outcomes.",
+    areas: [
+      {
+        title: "Digital Transformation",
+        description:
+          "Deploying RPA, IoT systems, and AI-assisted tooling to automate workflows, eliminate manual processes, and unlock real-time operational intelligence.",
+        icon: "⚡",
+        color: "green",
+      },
+      {
+        title: "Energy Management",
+        description:
+          "Identifying and executing energy conservation initiatives — from chiller optimization to right-sizing equipment — with a track record of 135.9 MWh annual savings.",
+        icon: "🌿",
+        color: "emerald",
+      },
+      {
+        title: "Carbon Footprint Assessment",
+        description:
+          "Applying ISO 14064-1:2018 methodology to measure, report, and reduce organizational carbon emissions — directly supporting corporate Net Zero strategies.",
+        icon: "♻",
+        color: "neon",
+      },
+    ],
   },
 
   techSkills: {

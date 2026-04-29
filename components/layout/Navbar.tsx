@@ -5,11 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 
 const NAV_LINKS = [
-  { id: "skills",       label: "Skills"       },
-  { id: "experience",   label: "Experience"   },
-  { id: "projects",     label: "Projects"     },
-  { id: "education",    label: "Education"    },
-  { id: "certifications", label: "Certs"      },
+  { id: "strategic-focus", label: "Focus"      },
+  { id: "skills",          label: "Skills"     },
+  { id: "experience",      label: "Experience" },
+  { id: "projects",        label: "Projects"   },
+  { id: "education",       label: "Education"  },
+  { id: "certifications",  label: "Certs"      },
 ];
 
 const SECTION_IDS = NAV_LINKS.map((l) => l.id);
