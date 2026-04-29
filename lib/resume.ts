@@ -156,7 +156,8 @@ export const resumeData: ResumeData = {
       description:
         "Right-sized thermal shock chamber procurement — replacing an oversized unit with an appropriately-sized chamber.",
       metrics: [
-        { value: 102, unit: "MWh", label: "Energy Reduction", decimals: 0 },
+        { value: 102,    unit: "MWh", label: "Energy Reduction",   decimals: 0 },
+        { value: 424287, unit: "THB", label: "Annual Cost Savings", decimals: 0 },
       ],
       tags: ["Hardware", "Energy", "Procurement"],
       featured: false,

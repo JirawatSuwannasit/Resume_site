@@ -140,12 +140,6 @@ export default function HeroSection() {
               <span className="text-accent-green font-medium">Energy Management</span>, and{" "}
               <span className="text-accent-emerald font-medium">Carbon Footprint Assessment</span>.
             </motion.p>
-            <motion.p
-              variants={itemVariants}
-              className="text-text-muted text-sm leading-relaxed max-w-xl mb-8 font-mono"
-            >
-              Proven track record: 135.9 MWh saved · 62.65 tCO₂ reduced · 74% lead time cut
-            </motion.p>
 
             {/* Contact row */}
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
@@ -172,13 +166,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.6, ease: "easeOut" }}
-          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl"
+          className="mt-16 grid grid-cols-3 gap-4 max-w-lg"
         >
           {[
-            { value: "135.9", unit: "MWh",  label: "Energy Saved"  },
-            { value: "62.65", unit: "tCO₂", label: "CO₂ Reduced"   },
-            { value: "74%",   unit: "",     label: "Lead Time Cut"  },
-            { value: "10+",   unit: "yrs",  label: "Experience"     },
+            { value: "238",   unit: "MWh",  label: "Energy Saved" },
+            { value: "62.65", unit: "tCO₂", label: "CO₂ Reduced"  },
+            { value: "10+",   unit: "yrs",  label: "Experience"    },
           ].map((s) => (
             <div
               key={s.label}
