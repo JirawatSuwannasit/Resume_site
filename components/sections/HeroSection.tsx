@@ -12,7 +12,7 @@ export default function HeroSection() {
   useEffect(() => {
     const id = setInterval(() => {
       setTaglineIdx((i) => (i + 1) % taglines.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(id);
   }, [taglines.length]);
 
@@ -113,18 +113,19 @@ export default function HeroSection() {
             </motion.h1>
 
             {/* Animated tagline */}
-            <motion.div variants={itemVariants} className="h-8 mb-6 overflow-hidden">
+            <motion.div variants={itemVariants} className="mb-6 flex flex-wrap items-baseline gap-x-2 gap-y-1 min-h-[1.75rem]">
+              <span className="font-mono text-accent-emerald text-lg shrink-0">&gt;</span>
               <AnimatePresence mode="wait">
-                <motion.p
+                <motion.span
                   key={taglineIdx}
-                  initial={{ opacity: 0, y: 16 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -16 }}
+                  exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                   className="font-mono text-accent-emerald text-lg"
                 >
-                  &gt; {taglines[taglineIdx]}
-                </motion.p>
+                  {taglines[taglineIdx]}
+                </motion.span>
               </AnimatePresence>
             </motion.div>
 
