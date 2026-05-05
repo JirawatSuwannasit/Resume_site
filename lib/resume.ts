@@ -3,7 +3,7 @@ import type { ResumeData } from "@/types/resume";
 export const resumeData: ResumeData = {
   hero: {
     name: "Jirawat Suwannasit",
-    role: "Hardware Test Supervisor",
+    role: "Energy Solutions Consultant / Hardware Test Supervisor",
     taglines: [
       "Seeking: Digital Transformation Roles",
       "Seeking: Energy Management Roles",
@@ -78,7 +78,7 @@ export const resumeData: ResumeData = {
   experience: [
     {
       company: "Panasonic Automotive System Asia Pacific",
-      role: "Hardware Test Supervisor",
+      role: "Energy Solutions Consultant / Hardware Test Supervisor",
       period: "Oct 2023 – Present",
       current: true,
       bullets: [

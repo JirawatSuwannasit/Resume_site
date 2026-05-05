@@ -23,11 +23,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jirawat Suwannasit — Hardware Test Supervisor",
+  title: "Jirawat Suwannasit — Energy Solutions Consultant / Hardware Test Supervisor",
   description:
-    "Personal resume of Jirawat Suwannasit — Hardware Test Supervisor specializing in IoT automation, energy conservation, and sustainable engineering.",
+    "Personal resume of Jirawat Suwannasit — Energy Solutions Consultant / Hardware Test Supervisor specializing in IoT automation, energy conservation, and sustainable engineering.",
   openGraph: {
-    title: "Jirawat Suwannasit — Hardware Test Supervisor",
+    title: "Jirawat Suwannasit — Energy Solutions Consultant / Hardware Test Supervisor",
     description:
       "Eco-Tech engineer combining hardware automation with environmental sustainability. 135.9 MWh annual energy savings.",
     type: "website",

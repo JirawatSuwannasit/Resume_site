@@ -93,7 +93,7 @@ export default function HeroSection() {
                 Open to New Opportunities
               </span>
               <span className="inline-flex items-center gap-2 font-mono text-xs text-accent-emerald border border-accent-emerald/30 rounded-full px-4 py-1.5 bg-accent-emerald/5">
-                Hardware Test Supervisor · Panasonic Automotive
+                Energy Solutions Consultant / Hardware Test Supervisor · Panasonic Automotive
               </span>
             </motion.div>
 
